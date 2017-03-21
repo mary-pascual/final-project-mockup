@@ -1,8 +1,8 @@
 {
-  "name": "meteor-application-template",
+  "name": "final-project-mockup",
   "private": true,
   "scripts": {
-    "start": "meteor --no-release-check --settings ../config/settings.development.json",
+    "start": "meteor --no-release-check",
     "lint": "eslint --quiet ./imports"
   },
   "dependencies": {

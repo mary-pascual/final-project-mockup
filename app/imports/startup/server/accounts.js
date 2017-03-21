@@ -11,6 +11,6 @@ if (Meteor.users.find().count() === 0) {
       password: Meteor.settings.defaultAccount.password,
     });
   } else {
-    console.log('No default user!  Please invoke meteor with a settings file.');
+    console.log('No default user!');
   }
 }

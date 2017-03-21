@@ -137,7 +137,7 @@ We use this approach to make it more simple to understand what code is loaded an
 Note that this two-level import structure ensures that all code and templates are loaded, but does not ensure that the symbols needed in a given file are accessible.  So, for example, a symbol bound to a collection still needs to be imported into any file that references it. For example, a server startup file needs to reference the symbol "Stuff" in order to initialize the collection, so it must import the symbol Stuff:
 
 ```
-import { Stuff } from '../../api/stuff/stuff.js';
+import { Stuff } from '../../api/stuff/items.js';
 import { _ } from 'meteor/underscore';
 
 /**
@@ -217,9 +217,9 @@ You must login to add edit documents in the Stuff collection.
 
 The application implements a single Collection called "Stuff". Each Stuff document has two fields: a String "name" and a Number "quantity".
 
-The Stuff collection is defined in [imports/api/stuff/stuff.js](https://github.com/ics-software-engineering/meteor-application-template/blob/master/app/imports/api/stuff/stuff.js).
+The Stuff collection is defined in [imports/api/stuff/items.js](https://github.com/ics-software-engineering/meteor-application-template/blob/master/app/imports/api/stuff/items.js).
 
-The Stuff collection is initialized in [imports/startup/server/stuff.js](https://github.com/ics-software-engineering/meteor-application-template/blob/master/app/imports/startup/server/stuff.js).
+The Stuff collection is initialized in [imports/startup/server/items.js](https://github.com/ics-software-engineering/meteor-application-template/blob/master/app/imports/startup/server/items.js).
 
 Note that this system uses autopublish to avoid the need to define publications and subscriptions.  That said, any templates presenting collection data must use `Template.subscriptionsReady` to ensure that subscription data is available before template rendering. See [imports/ui/pages/list-stuff-page.html](https://github.com/ics-software-engineering/meteor-application-template/blob/master/app/imports/ui/pages/list-stuff-page.html) for an example.
 

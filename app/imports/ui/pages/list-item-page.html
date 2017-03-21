@@ -1,0 +1,33 @@
+<template name="List_Item_Page">
+  <div style="margin-top: 100px" class="ui text container">
+    {{#if Template.subscriptionsReady}}
+    <table style="margin-top: 50px" class="ui celled table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Contact Info</th>
+        <th>Edit</th>
+        <th>Request</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      {{#each item in itemList}}
+      <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.telephone}}</td>
+        <td><a href="{{pathFor 'Edit_Item_Page' _id=item._id}}">Edit</a></td>
+        <td><a href="{{pathFor 'Request_Item_Page' _id=item._id}}">Request</a></td>
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+    {{else}}
+    {{> Loading}}
+    {{/if}}
+  </div>
+</template>

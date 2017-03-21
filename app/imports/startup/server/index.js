@@ -1,2 +1,4 @@
 import './accounts.js';
-import './stuff.js';
+import './items.js';
+import './publish.js';
+import './contacts.js';

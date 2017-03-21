@@ -1,0 +1,17 @@
+<template name="Add_Contact_Page">
+  <div style="margin-top: 125px" class="ui container">
+    <form class="ui form contact-data-form {{ errorClass }}">
+      <h4 class="ui dividing header">Add Contact</h4>
+      <div class="field">
+        <div class="two fields">
+          {{> Text_Form_Control label="First" required=true errorMessage=(fieldError "first")}}
+          {{> Text_Form_Control label="Last" required=true errorMessage=(fieldError "last")}}
+        </div>
+      </div>
+      <div class="field">
+        {{> Text_Form_Control label="Telephone" required=true errorMessage=(fieldError "telephone")}}
+      </div>
+      <button class="ui button" type="submit">Submit</button>
+    </form>
+  </div>
+</template>

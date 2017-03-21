@@ -1,0 +1,22 @@
+<template name="Request_Item_Page">
+  {{#if Template.subscriptionsReady}}
+  <div style="margin-top: 125px" class="ui container">
+    <form class="ui form item-data-form {{ errorClass }}">
+      <h4 class="ui dividing header">Request Item</h4>
+      <div class="field">
+        {{> Text_Form_Control label="Name" required=true value=(itemDataField 'name') errorMessage=(fieldError "name")}}
+      </div>
+      <div class="field">
+        {{> Text_Form_Control label="Quantity" required=true value=(itemDataField 'quantity') errorMessage=(fieldError "quantity")}}
+      </div>
+      <div class="field">
+        {{> Text_Form_Control label="Price" required=true value=(itemDataField 'price') errorMessage=(fieldError "price")}}
+      </div>
+      <div class="field">
+        {{> Text_Form_Control label="Telephone" required=true value=(itemDataField 'telephone') errorMessage=(fieldError "telephone")}}
+      </div>
+      <button class="ui button" type="submit">Request</button>
+    </form>
+  </div>
+  {{/if}}
+</template>
