@@ -15,3 +15,21 @@ When the user reaches the page, they are expected to log in using their UH email
 On the add item page, users can input the information of the item they desire to sell. Once they click submit, they'll be taken back to the home page. However, the item they input will go to the list of items page.
 
 <img class="home page" src="https://github.com/mary-pascual/final-project-mockup/blob/master/Screenshot%20(11).png">
+
+## Make an Account
+
+On this page, users can input their own information in order to create an account for themselves. With this account, other users can contact them in order to discuss the item they are about to purchase or to ask if the item is still available.
+
+<img class="home page" src="https://github.com/mary-pascual/final-project-mockup/blob/master/Screenshot%20(12).png">
+
+## List of Items
+
+In the List of Items page, it displays all the items users have input. The seller can edit the item (meaning they can change the information or delete the item) and the users can request the item to show other users it's on hold for them.
+
+<img class="home page" src="https://github.com/mary-pascual/final-project-mockup/blob/master/Screenshot%20(13).png">
+
+## List of Accounts
+
+For this page, it displays the list of users on this website. With it, buyers can contact the seller and vice versa in order to make the transaction work more smoothly.
+
+<img class="home page" src="https://github.com/mary-pascual/final-project-mockup/blob/master/Screenshot%20(14).png">
