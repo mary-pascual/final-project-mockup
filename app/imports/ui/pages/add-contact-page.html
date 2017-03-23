@@ -1,17 +1,26 @@
 <template name="Add_Contact_Page">
   <div style="margin-top: 125px" class="ui container">
-    <form class="ui form contact-data-form {{ errorClass }}">
-      <h4 class="ui dividing header">Add Contact</h4>
-      <div class="field">
-        <div class="two fields">
-          {{> Text_Form_Control label="First" required=true errorMessage=(fieldError "first")}}
-          {{> Text_Form_Control label="Last" required=true errorMessage=(fieldError "last")}}
+    <h4 class="ui dividing header">Add Profile</h4>
+    <div class="ui big form">
+      <div class="two fields">
+        <div class="field">
+          <label>First Name</label>
+          <textarea rows="1" placeholder="First Name" type="text"></textarea>
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <textarea rows="1" placeholder="Last Name" type="text"></textarea>
+        </div>
+        <div class="field">
+          <label>E-mail</label>
+          <textarea rows="1" placeholder="username@hawaii.edu" type="text"></textarea>
         </div>
       </div>
       <div class="field">
-        {{> Text_Form_Control label="Telephone" required=true errorMessage=(fieldError "telephone")}}
+        <p>Upload Image</p>
+        <div class="ui upload button">Upload</div>
       </div>
-      <button class="ui button" type="submit">Submit</button>
-    </form>
+      <div class="ui submit button">Submit</div>
+    </div>
   </div>
 </template>

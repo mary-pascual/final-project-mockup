@@ -21,8 +21,8 @@ export const ContactsSchema = new SimpleSchema({
     optional: false,
     max: 500,
   },
-  telephone: {
-    label: 'telephone',
+  email: {
+    label: 'email',
     type: String,
     optional: false,
     max: 500,

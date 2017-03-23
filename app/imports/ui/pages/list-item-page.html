@@ -1,31 +1,62 @@
 <template name="List_Item_Page">
   <div style="margin-top: 100px" class="ui text container">
     {{#if Template.subscriptionsReady}}
-    <table style="margin-top: 50px" class="ui celled table">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Contact Info</th>
-        <th>Edit</th>
-        <th>Request</th>
-      </tr>
-      </thead>
-
-      <tbody>
-      {{#each item in itemList}}
-      <tr>
-        <td>{{item.name}}</td>
-        <td>{{item.quantity}}</td>
-        <td>{{item.price}}</td>
-        <td>{{item.telephone}}</td>
-        <td><a href="{{pathFor 'Edit_Item_Page' _id=item._id}}">Edit</a></td>
-        <td><a href="{{pathFor 'Request_Item_Page' _id=item._id}}">Request</a></td>
-      </tr>
-      {{/each}}
-      </tbody>
-    </table>
+    <div class="ui grid">
+      <div class="eight wide column">
+        <div class="ui card">
+          <div class="content">
+            <div class="right floated meta">14h</div>
+            <img class="ui avatar image" src="https://www.cns.umass.edu/sites/default/files/styles/profile_portraits/public/images/profile/portrait/matthew-liu-portrait-square.jpg?itok=8D3fEHUY&c=b2cd581ba38921df66f9cb04ed15fa10"> Elliot
+          </div>
+          <div class="image">
+            <img class="ui image" src="http://d2ydh70d4b5xgv.cloudfront.net/images/5/c/college-algebra-graphs-models-fourth-edition-college-math-textbook-38824ad3da058f044a3116eb7969ae50.jpg">
+          </div>
+          <div class="content">
+            <p>I dropped the class so I have an unused textbook for College Algebra. Brand New. $50. Email me at elliot@hawaii.edu</p>
+            <p><a class="{{ isActiveRoute 'Edit_Item_Page'}} item" href="{{ pathFor 'Edit_Item_Page' }}">Are you the owner? Edit here!</a></p>
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      17 likes
+    </span>
+            <i class="comment icon"></i>
+            3 comments
+          </div>
+          <div class="extra content">
+            <div class="ui large transparent left icon input">
+              <i class="heart outline icon"></i>
+              <input type="text" placeholder="Add Comment...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eight wide column">
+        <div class="ui card">
+          <div class="content">
+            <div class="right floated meta">24h</div>
+            <img class="ui avatar image" src="http://www.fuqua.duke.edu/site_images/programs/daytime-mba/square/yasmine-hamdouche-square.jpg"> Ashley
+          </div>
+          <div class="image">
+            <img class="ui image" src="http://i.ebayimg.com/00/s/MTI4MFg5NjA=/z/NwQAAOSwo4pYJGZZ/$_58.JPG">
+          </div>
+          <div class="content">
+            <p>I took the MCAT and don't need it anymore. It honestly helps a lot. $25. Contact me at ashley@hawaii.edu</p>
+            <p><a class="{{ isActiveRoute 'Edit_Item_Page'}} item" href="{{ pathFor 'Edit_Item_Page' }}">Are you the owner? Edit here!</a></p>
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      23 likes
+    </span>
+            <i class="comment icon"></i>
+            19 comments
+          </div>
+          <div class="extra content">
+            <div class="ui large transparent left icon input">
+              <i class="heart outline icon"></i>
+              <input type="text" placeholder="Add Comment...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     {{else}}
     {{> Loading}}
     {{/if}}

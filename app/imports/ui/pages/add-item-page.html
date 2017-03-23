@@ -1,18 +1,14 @@
 <template name="Add_Item_Page">
-  <div style="margin-top: 125px" class="ui container">
+  <div style="margin-top: 100px" class="ui container">
     <form class="ui form contact-data-form {{ errorClass }}">
       <h4 class="ui dividing header">Add Items</h4>
       <div class="field">
-        {{> Text_Form_Control label="Name" required=true errorMessage=(fieldError "name")}}
+        <label>Description</label>
+        <textarea></textarea>
       </div>
       <div class="field">
-        {{> Text_Form_Control label="Quantity" required=true errorMessage=(fieldError "quantity")}}
-      </div>
-      <div class="field">
-        {{> Text_Form_Control label="Price" required=true errorMessage=(fieldError "price")}}
-      </div>
-      <div class="field">
-        {{> Text_Form_Control label="Telephone" required=true errorMessage=(fieldError "telephone")}}
+        <p>Upload Image</p>
+        <button class="ui upload button" type="upload">Upload</button>
       </div>
       <button class="ui button" type="submit">Submit</button>
     </form>

@@ -15,17 +15,10 @@ FlowRouter.route('/add-item', {
   },
 });
 
-FlowRouter.route('/edit-item/:_id', {
+FlowRouter.route('/edit-item', {
   name: 'Edit_Item_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Edit_Item_Page' });
-  },
-});
-
-FlowRouter.route('/request-item/:_id', {
-  name: 'Request_Item_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'Request_Item_Page' });
   },
 });
 
@@ -43,7 +36,7 @@ FlowRouter.route('/add-contact', {
   },
 });
 
-FlowRouter.route('/edit-contact/:_id', {
+FlowRouter.route('/edit-contact', {
   name: 'Edit_Contact_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Edit_Contact_Page' });

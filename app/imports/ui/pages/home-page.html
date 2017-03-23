@@ -1,8 +1,11 @@
 <template name="Home_Page">
   {{#If_Logged_In}}
-  <div style="margin-top: 100px" class="ui text container">
-    <h1>Welcome to the University of Hawaii at Manoa Flea Market</h1>
-    <h2>Let's get started!</h2>
+  <img class="ui top centered image" src="http://www.uhmshuttle.com/Images/clientLogo.jpg">
+  <div class="ui middle aligned centered grid text container">
+    <h1>Welcome to the University of Hawaii at Manoa Flea Market!</h1>
+    <a class="{{ isActiveRoute 'List_Item_Page'}} item" href="{{ pathFor 'List_Item_Page' }}">List of Items Currently on Sale</a>
+    <a class="{{ isActiveRoute 'List_Contact_Page'}} item" href="{{ pathFor 'List_Contact_Page' }}">List of Users</a>
+    <h1></h1>
   </div>
   {{/If_Logged_In}}
 </template>

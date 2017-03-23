@@ -17,3 +17,7 @@ Template.If_Logged_In.helpers({
     return !!Meteor.user();
   },
 });
+
+$('.ui.checkbox')
+    .checkbox()
+;

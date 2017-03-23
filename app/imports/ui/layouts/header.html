@@ -1,12 +1,13 @@
 <template name="Header">
   <div class="ui top fixed borderless inverted menu">
     <div class="ui container">
+      <a class="item"><img src="http://www.manoa.hawaii.edu/international/images/uh-logo.png"></a>
       <a class="item" href="{{pathFor 'Home_Page'}}"><h1>Flea Market</h1></a>
       {{#if currentUser}}
       <a class="{{ isActiveRoute 'Add_Item_Page'}} item" href="{{ pathFor 'Add_Item_Page' }}">Add Items to Sell!</a>
-      <a class="{{ isActiveRoute 'Add_Contact_Page'}} item" href="{{ pathFor 'Add_Contact_Page' }}">Make an Account!</a>
+      <a class="{{ isActiveRoute 'Add_Contact_Page'}} item" href="{{ pathFor 'Add_Contact_Page' }}">Make a Personal Profile!</a>
       <a class="{{ isActiveRoute 'List_Item_Page'}} item" href="{{ pathFor 'List_Item_Page' }}">List of Items</a>
-      <a class="{{ isActiveRoute 'List_Contact_Page'}} item" href="{{ pathFor 'List_Contact_Page' }}">List of Accounts</a>
+      <a class="{{ isActiveRoute 'List_Contact_Page'}} item" href="{{ pathFor 'List_Contact_Page' }}">List of Profiles</a>
       {{/if}}
       <a href="#" class="right aligned item">{{> loginButtons align="right"}} </a>
     </div>

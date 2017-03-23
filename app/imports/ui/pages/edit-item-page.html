@@ -1,23 +1,15 @@
 <template name="Edit_Item_Page">
-  {{#if Template.subscriptionsReady}}
   <div style="margin-top: 125px" class="ui container">
-    <form class="ui form item-data-form {{ errorClass }}">
-      <h4 class="ui dividing header">Edit Item</h4>
+    <div class="ui form">
       <div class="field">
-        {{> Text_Form_Control label="Name" required=true value=(itemDataField 'name') errorMessage=(fieldError "name")}}
+        <label>Description</label>
+        <textarea>I dropped the class so I have an unused textbook for College Algebra. Brand New. $50. Email me at elliot@hawaii.edu</textarea>
       </div>
       <div class="field">
-        {{> Text_Form_Control label="Quantity" required=true value=(itemDataField 'quantity') errorMessage=(fieldError "quantity")}}
+        <p>Upload Image</p>
+        <button class="ui upload button" type="upload">Upload</button>
       </div>
-      <div class="field">
-        {{> Text_Form_Control label="Price" required=true value=(itemDataField 'price') errorMessage=(fieldError "price")}}
-      </div>
-      <div class="field">
-        {{> Text_Form_Control label="Telephone" required=true value=(itemDataField 'telephone') errorMessage=(fieldError "telephone")}}
-      </div>
-      <button class="ui button" type="submit">Update</button>
-      <button class="ui button delete" type="submit">Delete</button>
-    </form>
+      <button class="ui button" type="submit">Submit</button>
+    </div>
   </div>
-  {{/if}}
 </template>

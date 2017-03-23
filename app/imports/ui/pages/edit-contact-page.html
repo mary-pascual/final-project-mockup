@@ -1,20 +1,26 @@
 <template name="Edit_Contact_Page">
-  {{#if Template.subscriptionsReady}}
   <div style="margin-top: 125px" class="ui container">
-    <form class="ui form contact-data-form {{ errorClass }}">
-      <h4 class="ui dividing header">Add Contact</h4>
-      <div class="field">
-        <div class="two fields">
-          {{> Text_Form_Control label="First" required=true value=(contactDataField 'first') errorMessage=(fieldError "first")}}
-          {{> Text_Form_Control label="Last" required=true value=(contactDataField 'last') errorMessage=(fieldError "last")}}
+    <h4 class="ui dividing header">Edit Profile</h4>
+    <div class="ui big form">
+      <div class="two fields">
+        <div class="field">
+          <label>First Name</label>
+          <textarea rows="1">Ashley</textarea>
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <textarea rows="1" placeholder="Last Name" type="text"></textarea>
+        </div>
+        <div class="field">
+          <label>E-mail</label>
+          <textarea rows="1">ashley@hawaii.edu</textarea>
         </div>
       </div>
       <div class="field">
-        {{> Text_Form_Control label="Telephone" required=true value=(contactDataField 'telephone') errorMessage=(fieldError "telephone")}}
+        <p>Upload Image</p>
+        <div class="ui upload button">Upload</div>
       </div>
-      <button class="ui button" type="submit">Update</button>
-      <button class="ui button delete" type="submit">Delete</button>
-    </form>
+      <div class="ui submit button">Submit</div>
+    </div>
   </div>
-  {{/if}}
 </template>
